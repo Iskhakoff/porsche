@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="porsche_test_4.Views.KPIPage"
+             Title="KPI дилерских центров">
+  <ListView ItemsSource="{Binding KPI}"
+               HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <StackLayout>
+
+              <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding diller_name}" FontSize="Medium" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                  <Label Text="Продуктивность" FontSize="Medium" />
+                  <Label Text="{Binding pr}" FontSize="Medium" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="Эффективность" FontSize="Medium" />
+                  <Label Text="{Binding ef}" FontSize="Medium" />
+                </StackLayout>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="Утилизация" FontSize="Medium" />
+                  <Label Text="{Binding ut}" FontSize="Medium" />
+                </StackLayout>
+
+              </StackLayout>
+
+
+            </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

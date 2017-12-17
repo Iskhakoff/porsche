@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="porsche_test_4.Views.LoginPage"
+             BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="false">
+  
+      
+    
+  <ScrollView>
+    <StackLayout Padding="60, 0, 160, 0">
+      
+      <StackLayout VerticalOptions="Center">
+        <Label Text="Имя пользователя" TextColor="#9f9f9f" FontSize="18"/>
+        <Entry Text="{Binding UserName}" BackgroundColor="#c4c4c4" TextColor="#848585" HeightRequest="50"/>
+        <Label Text="Пароль" TextColor="#9f9f9f" Margin="0, 20, 0, 0" FontSize="18"/>
+        <Entry Text="{Binding Password}" BackgroundColor="#c4c4c4" TextColor="#848585" HeightRequest="50" IsPassword="true"/>
+        <Button Text="Вход"
+                Command="{Binding LoginCommand}" BackgroundColor="#ffcc00" TextColor="#000000" Margin="0, 20, 0, 0" HeightRequest="70" FontSize="20"/>
+      </StackLayout>
+    
+  
+  </StackLayout>
+  </ScrollView>
+</ContentPage>

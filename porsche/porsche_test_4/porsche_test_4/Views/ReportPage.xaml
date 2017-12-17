@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="porsche_test_4.Views.ReportPage"
+             Title="Отчет"
+             NavigationPage.BarBackgroundColor="#000000"
+             Padding="10,20,20,10">
+  <ListView ItemsSource="{Binding Report}"
+              HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+    <StackLayout>
+
+      <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+          <Label Text="{Binding name}" FontSize="Medium" />
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+          <Label Text="{Binding number}" FontSize="Medium" />
+        </StackLayout>
+        
+      </StackLayout>
+
+
+    </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

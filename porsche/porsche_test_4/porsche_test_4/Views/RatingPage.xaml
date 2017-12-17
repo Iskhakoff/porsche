@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="porsche_test_4.Views.RatingPage"
+             Title="Отчеты"
+             NavigationPage.BarBackgroundColor="#000000"
+             Padding="10,20,20,10">
+ 
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Обновить" Command="{Binding RefreshContacts}" Order="Secondary"/>
+    <ToolbarItem Text="KPI" Command="{Binding OpenKPI}" Order="Secondary"/>
+    <ToolbarItem Text="Дилеры" Command="{Binding OpenProfile}" Order="Secondary"/>
+    <ToolbarItem Text="Выход" Command="{Binding OpenLog}" Order="Secondary"/>
+  </ContentPage.ToolbarItems>
+            
+  
+  <ListView ItemsSource="{Binding Ratings}"
+            HasUnevenRows="True"
+            VerticalOptions="FillAndExpand"
+            ItemTapped="ListView_OnItemTapped">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+              <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding name}"  FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding date}" />
+                  <Label Text="{Binding time}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <BoxView HeightRequest="1" BackgroundColor="#d9d9d9" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+              </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

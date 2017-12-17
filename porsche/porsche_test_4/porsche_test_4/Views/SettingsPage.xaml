@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="porsche_test_4.Views.SettingsPage"
+             NavigationPage.BarBackgroundColor="#000000"
+             Title="Дилеры"
+             Padding="10,20,20,10">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Обновить" Command="{Binding RefreshContacts}" Order="Secondary"/>
+    <ToolbarItem Text="Отчеты" Command="{Binding OpenProfile}" Order="Secondary"/>
+    <ToolbarItem Text="KPI" Command="{Binding OpenKPI}" Order="Secondary"/>
+    <ToolbarItem Text="Выход" Command="{Binding OpenLog}" Order="Secondary"/>
+    
+  </ContentPage.ToolbarItems>
+   
+  <ListView ItemsSource="{Binding Settings}"
+            HasUnevenRows="True">
+  <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+    <StackLayout>
+ 
+      <StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding name}"  FontSize="Medium"/>
+                </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding address}"  FontSize="Medium"/>
+                </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding telephone}"  FontSize="Medium"/>
+                </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                  <Label Text="{Binding site}"  FontSize="Medium"/>
+                </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+          <Label Text="{Binding code}"  FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+          <Label Text="{Binding manager}"  FontSize="Medium"/>
+        </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  Margin="0,0,0,20">
+                  <BoxView HeightRequest="1" BackgroundColor="#d9d9d9" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+      </StackLayout>
+ 
+ 
+    </StackLayout>
+  </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
