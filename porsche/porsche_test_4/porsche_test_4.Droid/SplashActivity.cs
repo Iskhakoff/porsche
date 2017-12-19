@@ -13,10 +13,9 @@ using Android.Content.PM;
 
 namespace porsche_test_4.Droid
 {
-    [Activity(Label = "Porsche Rating" , Theme = "@style/Theme.Splash",
+    [Activity(Label = "Diller Center" , Theme = "@style/Theme.Splash",
         MainLauncher = true,
-        NoHistory = true
-        )]
+        NoHistory = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class SplashActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

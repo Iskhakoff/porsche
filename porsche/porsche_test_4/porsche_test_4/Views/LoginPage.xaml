@@ -8,15 +8,15 @@
       
     
   <ScrollView>
-    <StackLayout Padding="60, 0, 160, 0">
-      
+    <StackLayout Padding="60, 0, 60, 0">
+      <Image Source="new_logo_2.png" />
       <StackLayout VerticalOptions="Center">
         <Label Text="Имя пользователя" TextColor="#9f9f9f" FontSize="18"/>
-        <Entry Text="{Binding UserName}" BackgroundColor="#c4c4c4" TextColor="#848585" HeightRequest="50"/>
+        <Entry Text="{Binding UserName}" BackgroundColor="#c4c4c4" TextColor="#000000" HeightRequest="50"/>
         <Label Text="Пароль" TextColor="#9f9f9f" Margin="0, 20, 0, 0" FontSize="18"/>
-        <Entry Text="{Binding Password}" BackgroundColor="#c4c4c4" TextColor="#848585" HeightRequest="50" IsPassword="true"/>
+        <Entry Text="{Binding Password}" BackgroundColor="#c4c4c4" TextColor="#000000" HeightRequest="50" IsPassword="true"/>
         <Button Text="Вход"
-                Command="{Binding LoginCommand}" BackgroundColor="#ffcc00" TextColor="#000000" Margin="0, 20, 0, 0" HeightRequest="70" FontSize="20"/>
+                Command="{Binding LoginCommand}" BackgroundColor="#E0E0E0" TextColor="#000000" Margin="0, 20, 0, 0" HeightRequest="70" FontSize="20"/>
       </StackLayout>
     
   
